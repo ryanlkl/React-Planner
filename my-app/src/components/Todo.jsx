@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 export default function Todo() {
+    
     let [tasks, setTasks] = useState([]);
     let [inputValue, setInputValue] = useState('');
 
@@ -47,19 +48,19 @@ export default function Todo() {
 
     return (
         <>
-        <input type="text" value={inputValue} onChange={handleInputChange}  onKeyDown={handleKeyDown} id="taskInput"/><br/>
-            <button onClick={handleAddTask}>Add</button>
-            <ol id="taskList">
-                {tasks.map((task, index) => (
-                    <li key={index}>
-                        <span className={task.isDone ? 'done' : ''}>{task.text}</span>
-                        <button onClick={() => handleTaskDone(index)}>
-                        {task.isDone ? 'X' : '✓'}
-                        </button>
-                        <button onClick={() => handleRemoveTask(index)}>Remove</button>
-                    </li>
-                ))}
-            </ol>
+            <input type="text" value={inputValue} onChange={handleInputChange}  onKeyDown={handleKeyDown} id="taskInput"/><br/>
+                <button onClick={handleAddTask}>Add</button>
+                <ol id="taskList">
+                    {tasks.map((task, index) => (
+                        <li key={index}>
+                            <span className={task.isDone ? 'done' : ''}>{task.text}</span>
+                            <button onClick={() => handleTaskDone(index)}>
+                            {task.isDone ? 'X' : '✓'}
+                            </button>
+                            <button onClick={() => handleRemoveTask(index)}>Remove</button>
+                        </li>
+                    ))}
+                </ol>
         </>
     )
 }
