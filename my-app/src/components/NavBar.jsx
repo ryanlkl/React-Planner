@@ -8,9 +8,8 @@ export default function NavBar() {
             <nav>
                 <ul id="links">
                     <li><Link className='links' to='/'>Home</Link></li>
-                    <li><Link className='links' to='/dailytodo'>Daily</Link></li>
-                    <li><Link className='links' to='/weeklytodo'>Weekly</Link></li>
-                    <li><Link className='links' to='/monthlytodo'>Monthly</Link></li>
+                    <li><Link className='links' to='/planner'>Planner</Link></li>
+                    <li><Link className='links' to='/todo'>To Do List</Link></li>
                 </ul>
             </nav>
         </div>

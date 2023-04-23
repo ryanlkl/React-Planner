@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function Todo() {
-    
+
     let [tasks, setTasks] = useState([]);
     let [inputValue, setInputValue] = useState('');
 
@@ -48,19 +48,23 @@ export default function Todo() {
 
     return (
         <>
-            <input type="text" value={inputValue} onChange={handleInputChange}  onKeyDown={handleKeyDown} id="taskInput"/><br/>
+        <div className="taskList">
+            <input type="text" value={inputValue} onChange={handleInputChange}  placeholder="Add Task" onKeyDown={handleKeyDown} id="taskInput"/>
                 <button onClick={handleAddTask}>Add</button>
                 <ol id="taskList">
                     {tasks.map((task, index) => (
-                        <li key={index}>
+                        <li key={index} className="list">
                             <span className={task.isDone ? 'done' : ''}>{task.text}</span>
-                            <button onClick={() => handleTaskDone(index)}>
+                            <button className="remove" onClick={() => handleRemoveTask(index)}>
+
+                            </button>
+                            <button className="completed" onClick={() => handleTaskDone(index)}>
                             {task.isDone ? 'X' : '✓'}
                             </button>
-                            <button onClick={() => handleRemoveTask(index)}>Remove</button>
                         </li>
                     ))}
                 </ol>
+        </div>
         </>
     )
 }

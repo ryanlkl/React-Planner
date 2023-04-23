@@ -2,3 +2,81 @@
     text-decoration: line-through;
     color: gray;
 }
+
+.taskList {
+    margin-right: 15px;
+    width: 75%;
+    margin: auto;
+}
+
+.taskList input{
+    margin-bottom: 15px;
+}
+
+.todo {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.todo input {
+    width: 50%;
+    height: 24px;
+    outline: solid 1px white;
+    border: none;
+    margin-right: 10px;
+}
+
+.todo button{
+    background-color: transparent;
+    width: 50px;
+    height: 25px;
+    outline: solid 1px white;
+    border: none;
+}
+
+.todo span {
+    margin-right: 5px;
+}
+
+.remove {
+    margin-left: 5px;
+}
+
+#taskList {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#taskList li {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.list {
+    position: relative;
+    margin-bottom: 10px;
+
+}
+
+.list span {
+    float: left;
+    width: 77.5%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.list button {
+    display: flex;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    float: right;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 5px;
+}

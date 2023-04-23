@@ -7,8 +7,8 @@ let Timelength = 'Daily';
 export default function DailyTodo() {
 
     return (
-        <div>
-            <h2>{Timelength}<br/>To Do</h2>
+        <div className="todo">
+            <h2>{Timelength} To Do</h2>
             <Todo />
         </div>
     )
